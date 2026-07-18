@@ -538,6 +538,39 @@ html.dark .check-badge { color: #8FD79A; }
   border: 3px solid var(--bg);
   outline: 2px solid var(--line);
 }
+.team-contact {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.65rem;
+  justify-items: center;
+}
+.team-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--ink-soft-rgb,62,79,70),0.18);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  background: color-mix(in srgb, var(--bg-alt) 90%, transparent);
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+.team-contact-link:hover {
+  transform: translateY(-1px);
+  border-color: var(--energy-yellow);
+  background: rgba(var(--energy-yellow-rgb),0.08);
+}
+.team-contact-mail {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  text-decoration: none;
+  word-break: break-word;
+}
+.team-contact-mail:hover {
+  color: var(--ink);
+}
 
 /* ==========================================================================
    Footer
@@ -677,14 +710,14 @@ footer { align-items: stretch; }
 
 .idearun-main {
   font-family: var(--font-display);
-  font-size: clamp(1.05rem, 1.55vw, 2rem);
+  font-size: clamp(1.25rem, 1.7vw, 2.3rem);
   font-weight: 800;
   letter-spacing: 0.04em;
 }
 
 .idearun-year {
   font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.25vw, 3rem);
+  font-size: clamp(1.35rem, 2vw, 2.6rem);
   font-weight: 800;
   font-style: italic;
   color: var(--energy-yellow);
@@ -848,9 +881,11 @@ footer .section-shell {
   .section-shell { width: min(94%, 1700px); }
   .nav-brand { gap: 0.65rem; }
   .ieee-nav-logo { width: 2.8rem; }
-  .idearun-main { font-size: 0.98rem; }
-  .idearun-year { font-size: 1.45rem; }
+  .idearun-main { font-size: 1.05rem; }
+  .idearun-year { font-size: 1.25rem; }
   .idearun-subtitle { font-size: 0.36rem; }
+  .nav-actions { display: flex; align-items: center; justify-content: flex-end; gap: 0.75rem; }
+  .nav-actions .btn { width: auto; }
   .btn { width: 100%; justify-content: center; white-space: normal; text-align: center; }
   #home .flex.flex-wrap { width: 100%; }
   #home .flex.items-center.gap-6 { flex-wrap: wrap; justify-content: center; }
@@ -858,6 +893,19 @@ footer .section-shell {
   .document-preview-panel { grid-template-columns: 1fr; }
   .document-preview-panel .doc-preview { min-height: 220px; }
   .footer-logo-cloud img { height: clamp(3.6rem, 16vw, 5.2rem); }
+
+  .hero-layout { align-items: start; gap: 1.75rem; }
+  .hero-layout .order-1 { order: 1; }
+  .hero-layout .order-2 { order: 2; }
+  .hero-poster-frame {
+    position: sticky;
+    top: calc(100vh - 18rem);
+    width: min(88vw, 320px);
+    max-width: 100%;
+    margin: 0 auto;
+    align-self: start;
+  }
+  #home { padding-bottom: 10rem; overflow: visible; }
 }
 
 @media (prefers-reduced-motion: reduce) {
